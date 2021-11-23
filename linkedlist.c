@@ -17,7 +17,6 @@ struct node {
 };
 
 struct node *head = NULL;
-struct node *current = NULL;
 
 void create()
 {
@@ -48,15 +47,14 @@ void create()
 
 void display() {
    struct node *ptr = head;
-   printf("\n[ ");
+   printf("\n");
 	
    //start from the beginning
    while(ptr != NULL) {
-      printf("(%d,%d) ",ptr->key,ptr->data);
+      printf("%d ",ptr->data);
       ptr = ptr->next;
    }
 	
-   printf(" ]");
 }
 
 void insert_begin()
@@ -69,7 +67,7 @@ void insert_begin()
                 return;
         }
         printf("nEnter the data value for the node:t" );
-        scanf("%d",&temp->info);
+        scanf("%d",&temp->data);
         temp->next =NULL;
         if(head==NULL)
         {
@@ -231,9 +229,9 @@ void main()
 int ch;
     do
     {
-    printf("\t Main Menu \n1.Create \n2.Display \n3.Insert at the beginning \n4.Insert at the end \n");
-    printf("\n 5.Insert at specified position \n6.Delete from beginning \n 7.Delete from the end \n");
-    printf("n 8.Delete from specified position \n9.Exit");
+    printf("\t Main Menu \n1.create \n2.insert at the beginning\n3.insert at the end \n4.insert at specified position\n");
+    printf("5.Delete from beginning \n6.Delete from the end \n");
+    printf("7.Delete from specified position \n8.display\n9.Exit\n");
     printf("Enter your choice:t");
     scanf("%d",&ch);
     switch(ch)
