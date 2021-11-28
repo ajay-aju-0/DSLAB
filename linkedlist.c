@@ -51,7 +51,6 @@ void Create(node *p)
 	}
 }
 
-
 node *Insert( node *p )
 {
 	node *q,*temp; 
