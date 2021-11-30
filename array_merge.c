@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-int a[50],b[50],c[50],k,i,m,n,temp
+int a[50],b[50],c[50],k,i,m,n,temp;
 printf("enter the number of elements in array 1:");
 scanf("%d",&n);
 printf("enter the elements:");
@@ -21,15 +21,15 @@ for(i=0;i<m;i++)
     k++;
 }
 printf("array after merging:");
-for(i=0;i<n;i++)
+for(i=0;i<k;i++)
 {
-    for (int j = i+1;j  < n; j++)
+    for (int j = i+1;j  < k; j++)
     {
-        if (a[i]>a[j])
+        if (c[i]>c[j])
         {
-            temp=a[i];
-            a[i]=a[j];
-            a[j]=temp;
+            temp=c[i];
+            c[i]=c[j];
+            c[j]=temp;
         }
     }
 }
